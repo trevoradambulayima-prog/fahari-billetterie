@@ -1,0 +1,42 @@
+BILLETTERIE FAHARI AFRIKA — LANCEMENT (28 novembre 2026)
+==========================================================
+
+CE QU'IL FAUT SUR LE PC (une seule fois)
+1. MySQL. Le plus simple : XAMPP (https://www.apachefriends.org).
+   Ouvrez le « XAMPP Control Panel » et cliquez sur Start à côté de MySQL.
+2. Python 3 (https://www.python.org/downloads/).
+   Pendant l'installation, cochez « Add python.exe to PATH ».
+
+INSTALLATION (une seule fois)
+- Double-cliquez sur INSTALLER.bat (connexion Internet nécessaire).
+
+UTILISATION
+- Double-cliquez sur LANCER.bat.
+- Au premier lancement, une fenêtre demande la connexion MySQL :
+    Serveur : localhost   Port : 3306   Utilisateur : root
+    Mot de passe : vide avec XAMPP (sinon le vôtre)
+  La base « fahari_billetterie » et ses tables sont créées automatiquement.
+  Les réglages sont gardés dans config.ini.
+
+DANS L'APPLICATION
+- Vendre un billet : remplir, « Enregistrer et générer le ticket ».
+  Le numéro est attribué automatiquement (FA-2026-0001… pour VIP,
+  FA-2026-S0001… pour Standard). Le formulaire se vide pour l'acheteur suivant.
+  Boutons : Voir le ticket, PDF, Imprimer, Envoyer sur WhatsApp
+  (WhatsApp s'ouvre sur la discussion de l'acheteur, faites Ctrl+V puis Envoyer).
+- Liste des acheteurs : cliquez une ligne, puis
+    Modifier  (ou double-clic)  — nom, prénom, téléphone, e-mail, paiement
+    Supprimer (ou touche Suppr) — efface l'acheteur et son ticket
+    Annuler le billet           — garde la trace, mais refusé à l'entrée
+- Contrôle à l'entrée : scannez le QR code (lecteur USB) ou tapez le numéro.
+
+Les tickets PNG et PDF sont enregistrés dans le dossier « tickets ».
+
+OPTION : CRÉER UN .EXE
+- Double-cliquez sur CREER_EXE.bat : produit Billetterie.exe, qui se lance
+  sans Python sur n'importe quel PC Windows (MySQL reste nécessaire).
+
+MODIFIER LES INFOS DE L'ÉVÉNEMENT
+- Date, heure, lieux, contact : en haut du fichier ticket_image.py.
+- Prix (50 $ / 25 $) : liste CATEGORIES en haut de billetterie.py
+  (appliqué au prochain lancement ; les billets déjà vendus gardent leur prix).

@@ -1,0 +1,14 @@
+# Réglages locaux (contient le mot de passe MySQL) — ne jamais publier
+config.ini
+
+# Tickets générés (données des acheteurs)
+tickets/
+*.csv
+
+# Python / build
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+Billetterie.exe
